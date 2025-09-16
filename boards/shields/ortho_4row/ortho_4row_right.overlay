@@ -1,4 +1,3 @@
-
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
@@ -15,12 +14,12 @@
         rows = <5>;
         map = <
             RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11) RC(0,12) RC(0,13)
-			RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6) RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11) RC(1,12) RC(1,13)
-			RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11) RC(2,12) RC(2,13)
-			RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11) RC(3,12) RC(3,13)
-			RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7) RC(4,8)
+            RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6) RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11) RC(1,12) RC(1,13)
+            RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11) RC(2,12) RC(2,13)
+            RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11) RC(3,12) RC(3,13)
+            RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7) RC(4,8)
         >;
-		col-offset = <7>;
+        col-offset = <7>;
     };
 
     kscan0: kscan {
@@ -30,26 +29,61 @@
         diode-direction = "col2row";
         row-gpios
             = <&akdk_d 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			,<&akdk_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			,<&akdk_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			,<&akdk_d 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			,<&akdk_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ,<&akdk_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ,<&akdk_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ,<&akdk_d 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ,<&akdk_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
         col-gpios
             = <&akdk_d 14 GPIO_ACTIVE_HIGH>
-			,<&akdk_d 13 GPIO_ACTIVE_HIGH>
-			,<&akdk_d 12 GPIO_ACTIVE_HIGH>
-			,<&akdk_d 6 GPIO_ACTIVE_HIGH>
-			,<&akdk_d 5 GPIO_ACTIVE_HIGH>
-			,<&akdk_d 4 GPIO_ACTIVE_HIGH>
-			,<&akdk_d 3 GPIO_ACTIVE_HIGH>
+            ,<&akdk_d 13 GPIO_ACTIVE_HIGH>
+            ,<&akdk_d 12 GPIO_ACTIVE_HIGH>
+            ,<&akdk_d 6 GPIO_ACTIVE_HIGH>
+            ,<&akdk_d 5 GPIO_ACTIVE_HIGH>
+            ,<&akdk_d 4 GPIO_ACTIVE_HIGH>
+            ,<&akdk_d 3 GPIO_ACTIVE_HIGH>
             ;
     };
 
+    /* (A) もし processors.dtsi に無い場合だけ定義する */
+#ifdef ZMK_NEEDS_SCROLL_PROCESSORS
+    zip_xy_to_scroll_mapper: xy_to_scroll_mapper {
+        compatible = "zmk,sensor-transform-xy-to-scroll";
+    };
+
+    zip_scroll_transform: scroll_axis_transform {
+        compatible = "zmk,sensor-transform-axis";
+    };
+
+    zip_scroll_scaler: scroll_scaler {
+        compatible = "zmk,sensor-transform-scale";
+    };
+#endif
+
+    /* (B) 通常マウス用（レイヤー0〜4） */
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_x_scaler 3 5>, <&zip_y_scaler 9 10>;
+        layers = <0 1 2 3 4>;
+        input-processors = <
+            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+            &zip_x_scaler 3 5
+            &zip_y_scaler 9 10
+        >;
+    };
+
+    /* (C) スクロール専用リスナー（レイヤー5のみ） */
+    trackball_scroll_listener: trackball_scroll_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        layers = <5>;
+        input-processors = <
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
+            &zip_scroll_scaler 1 128
+        >;
+        /* 他リスナーへさらに渡したいなら process-next; を有効化（通常不要） */
+        // process-next;
     };
 };
 
@@ -93,4 +127,3 @@
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
     };
 };
-
