@@ -56,10 +56,7 @@
 		37 // T
 		38 // N
 		39 // S
-		60 // Return
-		61 // Backspace
-		42 // Ctrl
-    >;
+	>;
 };
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
