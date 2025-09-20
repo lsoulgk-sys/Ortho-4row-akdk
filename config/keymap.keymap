@@ -12,7 +12,7 @@
 &kp TAB         &kp Q   &kp L   &kp U            &kp COMMA     &kp PERIOD        &none             &tog 4          &kp F            &kp W   &kp R    &kp Y    &kp P    &kp PG_DN
 &kp LEFT_SHIFT  &kp E   &kp I   &kp A            &kp O         &kp MINUS         &kp INT_MUHENKAN  &kp INT_HENKAN  &kp K            &kp T   &kp N    &kp S    &kp H    &kp HOME
 &kp LCTRL       &kp Z   &kp X   &kp C            &kp V         &kp SEMICOLON     &kp ENTER         &kp SPACE       &kp G            &kp D   &kp M    &kp J    &kp B    &kp END
-                                &lt 1 BACKSPACE  &lt 2 DELETE  &lt 3 LEFT_SHIFT  &kp SPACE         &kp ENTER       &lt 4 BACKSPACE
+                                &lt 1 BACKSPACE  &lt 2 DELETE  &lt 3 LEFT_SHIFT  &kp SPACE         &lt 2 ENTER     &lt 4 BACKSPACE
             >;
         };
 
