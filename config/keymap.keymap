@@ -9,7 +9,7 @@
         layer_0 {
             bindings = <
 &kp ESC         &kp F1  &kp F2  &kp F3           &kp F4        &kp F5            &kp F6            &kp F7          &kp F8           &kp F9  &kp F10  &kp F11  &kp F12  &kp PG_UP
-&kp TAB         &kp Q   &kp L   &kp U            &kp COMMA     &kp PERIOD        &kp LALT          &tog 4          &kp F            &kp W   &kp R    &kp Y    &kp P    &kp PG_DN
+&kp TAB         &kp Q   &kp L   &kp U            &kp COMMA     &kp PERIOD        &kp LALT          &to 4           &kp F            &kp W   &kp R    &kp Y    &kp P    &kp PG_DN
 &kp LEFT_SHIFT  &kp E   &kp I   &kp A            &kp O         &kp MINUS         &kp INT_MUHENKAN  &kp INT_HENKAN  &kp K            &kp T   &kp N    &kp S    &kp H    &kp HOME
 &kp LCTRL       &kp Z   &kp X   &kp C            &kp V         &kp SEMICOLON     &kp ENTER         &kp SPACE       &kp G            &kp D   &kp M    &kp J    &kp B    &kp END
                                 &lt 1 BACKSPACE  &lt 2 DELETE  &lt 3 LEFT_SHIFT  &kp SPACE         &lt 2 ENTER     &lt 4 BACKSPACE
@@ -48,7 +48,7 @@
 
         layer_4 {
             bindings = <
-&trans       &kp F1     &kp F2     &kp F3     &kp F4     &kp F5   &trans   &trans     &kp N7  &kp N8   &kp N9   &kp SLASH       &kp PLUS      &tog 0
+&trans       &kp F1     &kp F2     &kp F3     &kp F4     &kp F5   &trans   &trans     &kp N7  &kp N8   &kp N9   &kp SLASH       &kp PLUS      &to 0
 &kp F6       &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12  &kp DEL    &kp N4  &kp N5   &kp N6   &kp ASTERISK    &kp MINUS     &trans
 &trans       &kp LC(A)  &trans     &trans     &trans     &trans   &trans   &kp BSPC   &kp N1  &kp N2   &kp N3   &trans          &kp UP_ARROW  &trans
 &kp LA(TAB)  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans   &trans   &trans     &kp N0  &kp DOT  &kp RET  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT
