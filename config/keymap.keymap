@@ -8,21 +8,21 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp F1  &kp F2  &kp F3           &kp F4        &kp F5            &kp F6            &kp F7          &kp F8           &kp F9  &kp F10  &kp F11  &kp F12  &kp PG_UP
-&kp TAB         &kp Q   &kp L   &kp U            &kp COMMA     &kp PERIOD        &kp LALT          &to 4           &kp F            &kp W   &kp R    &kp Y    &kp P    &kp PG_DN
-&kp LEFT_SHIFT  &kp E   &kp I   &kp A            &kp O         &kp MINUS         &kp INT_MUHENKAN  &kp INT_HENKAN  &kp K            &kp T   &kp N    &kp S    &kp H    &kp HOME
-&kp LCTRL       &kp Z   &kp X   &kp C            &kp V         &kp SEMICOLON     &kp ENTER         &kp SPACE       &kp G            &kp D   &kp M    &kp J    &kp B    &kp END
-                                &lt 1 BACKSPACE  &lt 2 DELETE  &lt 3 LEFT_SHIFT  &kp SPACE         &lt 2 ENTER     &lt 4 BACKSPACE
+&kp ESC         &kp F1  &kp F2  &kp F3           &kp F4        &kp F5         &kp F6            &kp F7           &kp F8       &kp F9  &kp F10  &kp F11  &kp F12  &kp PG_UP
+&kp TAB         &kp Q   &kp L   &kp U            &kp COMMA     &kp PERIOD     &kp LALT          &to 4            &kp F        &kp W   &kp R    &kp Y    &kp P    &kp PG_DN
+&kp LEFT_SHIFT  &kp E   &kp I   &kp A            &kp O         &kp MINUS      &kp INT_MUHENKAN  &kp INT_HENKAN   &kp K        &kp T   &kp N    &kp S    &kp H    &kp HOME
+&kp LCTRL       &kp Z   &kp X   &kp C            &kp V         &kp SEMICOLON  &kp ENTER         &kp SPACE        &kp G        &kp D   &kp M    &kp J    &kp B    &kp END
+                                &lt 1 BACKSPACE  &lt 2 DELETE  &lt 3 RCTRL    &kp SPACE         &lt 4 BACKSPACE  &lt 2 ENTER
             >;
         };
 
         layer_1 {
             bindings = <
-&none  &kp N1        &kp N2       &kp N3         &kp N4        &kp N5         &none         &none         &kp N6        &kp N7         &kp N8         &kp N9         &kp N0         &none
-&none  &kp LS(EXCL)  &kp LS(DQT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(AMPS)  &kp LS(AMPS)  &kp LS(AMPS)  &kp LS(SQT)    &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(TILDE)  &kp LS(PIPE)
-&none  &none         &none        &none          &none         &none          &none         &none         &kp AT_SIGN   &kp LS(GRAVE)  &kp LS(LBRC)   &kp LS(PLUS)   &kp LS(STAR)   &kp LS(RBRC)
-&none  &none         &none        &none          &none         &none          &none         &none         &kp LS(LT)    &kp LS(GT)     &kp LS(QMARK)  &kp LS(UNDER)  &none          &none
-                                  &none          &none         &none          &none         &none         &none
+&none  &kp N1           &kp N2             &kp N3     &kp N4      &kp N5       &none         &none         &kp N6         &kp N7            &kp N8                &kp N9                 &kp N0        &none
+&none  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp POUND  &kp DOLLAR  &kp PERCENT  &kp LS(AMPS)  &kp LS(AMPS)  &kp AMPERSAND  &kp GRAVE         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp BACKSLASH
+&none  &none            &none              &none      &none       &none        &none         &none         &kp AT_SIGN    &kp SINGLE_QUOTE  &kp GRAVE             &kp UNDERSCORE         &kp LS(STAR)  &kp LS(RBRC)
+&none  &none            &none              &none      &none       &none        &none         &none         &kp LS(LT)     &kp LS(GT)        &kp LS(QMARK)         &kp LS(UNDER)          &none         &none
+                                           &none      &none       &none        &none         &none         &none
             >;
         };
 
