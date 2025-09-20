@@ -71,6 +71,9 @@
 		60 // Return
 		61 // Backspace
 		42 // Ctrl
+		52 // M
+		53 // J
+		54 // B
 	>;
 };
 
