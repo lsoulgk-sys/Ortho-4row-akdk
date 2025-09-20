@@ -46,6 +46,21 @@
             ;
     };
 
+&zip_temp_layer {
+    excluded-positions = <
+        22 // F
+        23 // W
+        24 // R
+        25 // Y
+		36 // K
+		37 // T
+		38 // N
+		39 // S
+		60 // Return
+		61 // Backspace
+		42 // Ctrl
+    >;
+};
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
