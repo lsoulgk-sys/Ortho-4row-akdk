@@ -37,11 +37,11 @@
 
         arrow {
             bindings = <
-&kp ESC    &none  &none      &none      &none     &none  &none  &none    &none             &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none
-&kp TAB    &none  &none      &kp LGUI   &kp BSPC  &none  &none  &none    &none             &kp DEL          &kp UP_ARROW       &kp BSPC         &none  &none
-&kp LSHFT  &none  &kp LCTRL  &kp LSHFT  &kp BSPC  &none  &none  &none    &kp INT_MUHENKAN  &kp LEFT         &kp DOWN           &kp RIGHT        &none  &none
-&kp LCTRL  &none  &none      &none      &none     &none  &none  &none    &none             &kp LC(LS(TAB))  &kp INT_HENKAN     &kp LC(TAB)      &none  &none
-                             &none      &none     &none  &none  &kp DEL  &kp BSPC
+&kp ESC    &none     &none      &none          &none     &none  &none  &none    &none             &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none
+&kp TAB    &none     &none      &kp LGUI       &kp BSPC  &none  &none  &none    &none             &kp DEL          &kp UP_ARROW       &kp BSPC         &none  &none
+&kp LSHFT  &none     &kp LCTRL  &kp LSHFT      &kp BSPC  &none  &none  &none    &kp INT_MUHENKAN  &kp LEFT         &kp DOWN           &kp RIGHT        &none  &none
+&kp LCTRL  &kp LALT  &kp LGUI   &kp PAGE_DOWN  &none     &none  &none  &none    &none             &kp LC(LS(TAB))  &kp INT_HENKAN     &kp LC(TAB)      &none  &none
+                                &none          &none     &none  &none  &kp DEL  &kp BSPC
             >;
         };
 
