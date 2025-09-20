@@ -58,10 +58,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans              &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &lt 6 INT_MUHENKAN  &mkp MB3  &mkp MB5  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &mkp MB1            &mkp MB2  &mkp MB4  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans              &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &lt 6 LEFT_SHIFT  &mkp MB3  &mkp MB5  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &mkp MB1          &mkp MB2  &mkp MB4  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &mkp MB1          &mkp MB2  &mkp MB4  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans            &trans    &trans    &trans  &trans
                         &trans  &trans  &trans  &trans  &lt 6 INT_MUHENKAN  &trans
             >;
         };
