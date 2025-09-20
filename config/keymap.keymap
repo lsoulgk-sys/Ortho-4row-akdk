@@ -67,10 +67,10 @@
 
         mouse {
             bindings = <
-&kp ESC    &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &trans       &trans              &trans              &trans              &trans
-&kp TAB    &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &kp F5       &mkp MB3            &mkp MB5            &mkp MB5            &trans
-&kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &mkp MB1     &mkp MB2            &mkp MB4            &mkp MB4            &trans
-&kp LCTRL  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &screen_cut  &lt 6 INT_MUHENKAN  &lt 6 INT_MUHENKAN  &lt 6 INT_MUHENKAN  &trans
+&kp ESC    &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &trans       &trans    &trans              &trans  &trans
+&kp TAB    &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &kp F5       &mkp MB3  &mkp MB5            &trans  &trans
+&kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &mkp MB1     &mkp MB2  &lt 6 INT_MUHENKAN  &trans  &trans
+&kp LCTRL  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &screen_cut  &trans    &mkp MB4            &trans  &trans
                            &trans  &trans  &trans  &lt 6 INT_MUHENKAN  &lt 6 INT_MUHENKAN  &trans
             >;
         };
