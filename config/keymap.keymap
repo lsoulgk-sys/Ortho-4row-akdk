@@ -67,8 +67,8 @@
 
         mouse {
             bindings = <
-&kp ESC    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans    &trans              &trans  &trans
-&kp TAB    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F5       &mkp MB3  &mkp MB5            &trans  &trans
+&kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans    &trans              &trans  &trans
+&kp LCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F5       &mkp MB3  &mkp MB5            &trans  &trans
 &kp LSHFT  &kp A   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1     &mkp MB2  &lt 6 INT_MUHENKAN  &trans  &trans
 &kp LCTRL  &kp Z   &kp X   &kp C   &kp V   &trans  &trans  &trans  &trans  &screen_cut  &trans    &mkp MB4            &trans  &trans
                            &trans  &trans  &trans  &trans  &trans  &trans
