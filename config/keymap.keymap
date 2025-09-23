@@ -41,11 +41,11 @@
 
         base {
             bindings = <
-&kp ESC         &kp F1  &kp F2  &kp F3            &kp F4       &kp F5         &kp F6         &kp F7           &kp F8       &kp F9  &kp F10  &kp F11  &kp F12  &kp HOME
-&kp TAB         &kp Q   &kp L   &kp U             &kp COMMA    &kp PERIOD     &kp LALT       &to 4            &kp F        &kp W   &kp R    &kp Y    &kp P    &kp END
-&kp LEFT_SHIFT  &kp E   &kp I   &kp A             &kp O        &kp MINUS      &kp LC(GRAVE)  &kp AT_SIGN      &kp K        &kp T   &kp N    &kp S    &kp H    &kp DELETE
-&kp LCTRL       &kp Z   &kp X   &kp C             &kp V        &kp SEMICOLON  &kp LEFT_WIN   &kp SPACE        &kp G        &kp D   &kp M    &kp J    &kp B    &kp QUESTION
-                                &lt 1 LEFT_SHIFT  &lt 2 LCTRL  &lt 3 SPACE    &kp BACKSPACE  &lt 4 BACKSPACE  &lt 2 ENTER
+&kp ESC         &kp F1  &kp F2  &kp F3            &kp F4       &kp F5         &kp F6            &kp F7           &kp F8       &kp F9  &kp F10  &kp F11  &kp F12  &kp HOME
+&kp TAB         &kp Q   &kp L   &kp U             &kp COMMA    &kp PERIOD     &kp LALT          &to 4            &kp F        &kp W   &kp R    &kp Y    &kp P    &kp END
+&kp LEFT_SHIFT  &kp E   &kp I   &kp A             &kp O        &kp MINUS      &kp INT_MUHENKAN  &kp INT_HENKAN   &kp K        &kp T   &kp N    &kp S    &kp H    &kp DELETE
+&kp LCTRL       &kp Z   &kp X   &kp C             &kp V        &kp SEMICOLON  &kp LEFT_WIN      &kp SPACE        &kp G        &kp D   &kp M    &kp J    &kp B    &kp QUESTION
+                                &lt 1 LEFT_SHIFT  &lt 2 LCTRL  &lt 3 SPACE    &kp BACKSPACE     &lt 4 BACKSPACE  &lt 2 ENTER
             >;
         };
 
@@ -61,10 +61,10 @@
 
         arrow {
             bindings = <
-&kp ESC    &none        &none      &none          &none     &none  &none  &none    &none          &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none
-&kp TAB    &kp LA(TAB)  &none      &kp LGUI       &kp BSPC  &none  &none  &none    &none          &kp DEL          &kp UP_ARROW       &kp BSPC         &none  &none
-&kp LSHFT  &none        &kp LCTRL  &kp LSHFT      &kp BSPC  &none  &none  &none    &kp LC(GRAVE)  &kp LEFT         &kp DOWN           &kp RIGHT        &none  &none
-&kp LCTRL  &kp LALT     &kp LGUI   &kp PAGE_DOWN  &none     &none  &none  &none    &none          &kp LC(LS(TAB))  &kp LC(GRAVE)      &kp LC(TAB)      &none  &none
+&kp ESC    &none        &none      &none          &none     &none  &none  &none    &none             &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none
+&kp TAB    &kp LA(TAB)  &none      &kp LGUI       &kp BSPC  &none  &none  &none    &none             &kp DEL          &kp UP_ARROW       &kp BSPC         &none  &none
+&kp LSHFT  &none        &kp LCTRL  &kp LSHFT      &kp BSPC  &none  &none  &none    &kp INT_HENKAN    &kp LEFT         &kp DOWN           &kp RIGHT        &none  &none
+&kp LCTRL  &kp LALT     &kp LGUI   &kp PAGE_DOWN  &none     &none  &none  &none    &kp INT_MUHENKAN  &kp LC(LS(TAB))  &kp LC(GRAVE)      &kp LC(TAB)      &none  &none
                                    &none          &none     &none  &none  &kp DEL  &kp BSPC
             >;
         };
