@@ -49,13 +49,13 @@
             >;
         };
 
-         kigou {
+        kigou {
             bindings = <
-&kp ESC    &kp N1           &kp N2             &kp N3     	    &kp N4      &kp N5       &none  &none  &kp N6         	&kp N7          &kp N8         		&kp N9         	&kp N0        	    &none
-&kp TAB    &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp POUND  	    &kp DOLLAR  &kp PERCENT  &none  &none  &kp JP_AMPERSAND &kp JP_QUOTE    &kp JP_LPAREN  		&kp JP_RPAREN  	&kp MINUS     	    &kp JP_YEN
-&kp LSHFT  &kp JP_EQUAL     &none              &kp JP_ASTERISK 	&none       &none        &none  &none  &kp AT_SIGN    	&kp JP_AT  	&kp JP_UNDERSCORE      	&kp JP_TILDE 	&kp LS(STAR)  	    &kp LS(RBRC)
-&kp LCTRL  &none            &none              &kp JP_COLON     &none       &none        &none  &none  &kp LS(LT)     	&kp LS(GT)      &kp LS(QMARK)  		&kp LS(UNDER)  	&kp JP_BACKQUOTE    &none
-                                               &none      	    &none       &none        &none  &none  &kp LSHFT
+&kp ESC    &kp N1           &kp N2             &kp N3           &kp N4      &kp N5       &none  &none  &kp N6            &kp N7        &kp N8             &kp N9         &kp N0            &none
+&kp TAB    &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp POUND        &kp DOLLAR  &kp PERCENT  &none  &none  &kp JP_AMPERSAND  &kp JP_QUOTE  &kp JP_LPAREN      &kp JP_RPAREN  &kp MINUS         &kp JP_YEN
+&kp LSHFT  &kp JP_EQUAL     &none              &kp JP_ASTERISK  &none       &none        &none  &none  &kp AT_SIGN       &kp JP_AT     &kp JP_UNDERSCORE  &kp JP_TILDE   &kp LS(STAR)      &kp LS(RBRC)
+&kp LCTRL  &none            &none              &kp JP_COLON     &none       &none        &none  &none  &kp LS(LT)        &kp LS(GT)    &kp LS(QMARK)      &kp LS(UNDER)  &kp JP_BACKQUOTE  &none
+                                               &none            &none       &none        &none  &none  &kp LSHFT
             >;
         };
 
@@ -106,6 +106,26 @@
 &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        qwerty {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3              &kp N4    &kp N5     &kp N6     &trans  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &trans
+&kp TAB    &kp Q   &kp W   &kp E               &kp R     &kp T      &kp Y      &trans  &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&kp LSHFT  &kp A   &kp S   &kp D               &kp F     &kp G      &kp H      &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
+&kp LCTRL  &kp Z   &kp X   &kp C               &kp V     &kp B      &kp N      &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                           &lt 8 INT_MUHENKAN  &kp LALT  &kp SPACE  &kp ENTER  &trans  &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans   &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
