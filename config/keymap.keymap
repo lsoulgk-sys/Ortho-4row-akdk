@@ -41,11 +41,11 @@
 
         base {
             bindings = <
-&kp ESC         &kp F1  &kp F2  &kp F3            &kp F4       &kp F5         &kp F6            &kp F7           &kp F8     &kp F9  &kp F10  &kp F11  &kp F12  &kp HOME
-&kp TAB         &kp Q   &kp L   &kp U             &kp COMMA    &kp PERIOD     &kp LALT          &to 4            &kp F      &kp W   &kp R    &kp Y    &kp P    &kp END
-&kp LEFT_SHIFT  &kp E   &kp I   &kp A             &kp O        &kp MINUS      &kp INT_MUHENKAN  &kp INT_HENKAN   &kp K      &kp T   &kp N    &kp S    &kp H    &kp P
-&kp LCTRL       &kp Z   &kp X   &kp C             &kp V        &kp SEMICOLON  &kp LEFT_WIN      &kp DELETE       &kp G      &kp D   &kp M    &kp J    &kp B    &kp QUESTION
-                                &lt 1 LEFT_SHIFT  &lt 2 LCTRL  &lt 4 SPACE    &kp BACKSPACE     &lt 2 BACKSPACE  &kp ENTER
+&kp ESC         &kp F1  &kp F2  &kp F3            &kp F4       &kp F5         &kp F6            &kp F7           &kp F8       &kp F9  &kp F10  &kp F11  &kp F12  &kp HOME
+&kp TAB         &kp Q   &kp L   &kp U             &kp COMMA    &kp PERIOD     &kp LALT          &to 4            &kp F        &kp W   &kp R    &kp Y    &kp P    &kp END
+&kp LEFT_SHIFT  &kp E   &kp I   &kp A             &kp O        &kp MINUS      &kp INT_MUHENKAN  &kp INT_HENKAN   &kp K        &kp T   &kp N    &kp S    &kp H    &kp P
+&kp LCTRL       &kp Z   &kp X   &kp C             &kp V        &kp SEMICOLON  &kp LEFT_WIN      &kp DELETE       &kp G        &kp D   &kp M    &kp J    &kp B    &kp QUESTION
+                                &lt 1 LEFT_SHIFT  &lt 2 LCTRL  &lt 4 SPACE    &kp BACKSPACE     &lt 4 BACKSPACE  &lt 2 ENTER
             >;
         };
 
