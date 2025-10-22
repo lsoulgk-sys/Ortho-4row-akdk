@@ -84,7 +84,7 @@
             bindings = <
 &trans       &kp F1     &kp F2     &kp F3     &kp F4     &kp F5   &trans   &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_N9        &kp SLASH       &kp PLUS      &to 0
 &kp F6       &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12  &kp DEL    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK    &kp MINUS     &trans
-&trans       &kp LC(A)  &trans     &trans     &trans     &trans   &trans   &kp BSPC   &kp KP_N1        &kp KP_N2        &kp KP_NUMBER_3  &trans          &kp UP_ARROW  &trans
+&trans       &kp LC(A)  &trans     &trans     &trans     &trans   &trans   &kp BSPC   &kp KP_N1        &kp KP_N2        &kp KP_NUMBER_3  &kp KP_PLUS     &kp UP_ARROW  &trans
 &kp LA(TAB)  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans   &trans   &trans     &kp KP_N0        &kp DOT          &kp RET          &kp LEFT_ARROW  &kp DOWN      &kp RIGHT
                                    &trans     &kp LGUI   &trans   &trans   &kp ENTER  &trans
             >;
