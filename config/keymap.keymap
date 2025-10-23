@@ -54,7 +54,7 @@
             bindings = <
 &kp ESC    &kp N1           &kp N2             &kp N3           &kp N4      &kp N5       &none  &none  &kp N6            &kp N7        &kp N8             &kp N9         &kp N0            &none
 &kp TAB    &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp POUND        &kp DOLLAR  &kp PERCENT  &none  &none  &kp JP_AMPERSAND  &kp JP_QUOTE  &kp JP_LPAREN      &kp JP_RPAREN  &kp MINUS         &kp JP_YEN
-&kp LSHFT  &kp JP_EQUAL     &none              &kp JP_ASTERISK  &kp SEMI    &none        &none  &none  &kp AT_SIGN       &kp JP_AT     &kp JP_UNDERSCORE  &kp JP_TILDE   &kp LS(STAR)      &kp LS(RBRC)
+&kp LSHFT  &kp JP_EQUAL     &kp SEMI           &kp JP_ASTERISK  &kp LBKT    &kp RBKT     &none  &none  &kp AT_SIGN       &kp JP_AT     &kp JP_UNDERSCORE  &kp JP_TILDE   &kp LS(STAR)      &kp LS(RBRC)
 &kp LCTRL  &none            &none              &kp JP_COLON     &none       &none        &none  &none  &kp LS(LT)        &kp LS(GT)    &kp LS(QMARK)      &kp LS(UNDER)  &kp JP_BACKQUOTE  &none
                                                &none            &none       &none        &none  &none  &kp LSHFT
             >;
