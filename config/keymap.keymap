@@ -43,7 +43,7 @@
         base {
             bindings = <
 &kp ESC         &kp F1  &kp F2  &kp F3            &kp F4              &kp F5       &kp F6            &kp F7           &kp F8       &kp F9  &kp F10  &kp F11  &kp F12  &kp HOME
-&kp TAB         &kp Q   &kp L   &kp U             &kp COMMA           &kp PERIOD   &kp LALT          &to 4            &kp F        &kp W   &kp R    &kp Y    &kp P    &kp END
+&kp TAB         &kp Q   &kp L   &kp U             &kp COMMA           &kp PERIOD   &kp LALT          &tog 4           &kp F        &kp W   &kp R    &kp Y    &kp P    &kp END
 &kp LEFT_SHIFT  &kp E   &kp I   &mt LEFT_ALT A    &kp O               &kp MINUS    &kp INT_MUHENKAN  &kp INT_HENKAN   &kp K        &kp T   &kp N    &kp S    &kp H    &kp P
 &kp LCTRL       &kp Z   &kp X   &kp C             &kp V               &kp TAB      &kp LEFT_WIN      &kp DELETE       &kp G        &kp D   &kp M    &kp J    &kp B    &kp QUESTION
                                 &lt 3 INT_HENKAN  &lt 1 INT_MUHENKAN  &lt 4 SPACE  &kp DELETE        &lt 4 BACKSPACE  &lt 2 ENTER
@@ -82,7 +82,7 @@
 
         tenkey {
             bindings = <
-&trans       &kp F1     &kp F2     &kp F3     &kp F4     &kp F5   &trans   &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_SLASH     &kp KP_PLUS   &to 0
+&trans       &kp F1     &kp F2     &kp F3     &kp F4     &kp F5   &trans   &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_SLASH     &kp KP_PLUS   &tog 4
 &kp F6       &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12  &kp DEL    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK  &kp KP_MINUS  &trans
 &trans       &kp LC(A)  &trans     &trans     &trans     &trans   &trans   &kp BSPC   &kp KP_N1        &kp KP_N2        &kp KP_NUMBER_3  &kp KP_PLUS      &kp UP_ARROW  &trans
 &kp LA(TAB)  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans   &trans   &trans     &kp KP_N0        &kp DOT          &kp RET          &kp LEFT_ARROW   &kp DOWN      &kp RIGHT
