@@ -42,11 +42,11 @@
 
         base {
             bindings = <
-&kp ESC         &kp F1  &kp F2  &kp F3            &kp F4              &kp F5       &kp F6            &kp F7           &kp F8       &kp F9  &kp F10  &kp F11  &kp F12  &kp HOME
-&kp TAB         &kp Q   &kp L   &kp U             &kp COMMA           &kp PERIOD   &kp LALT          &tog 4           &kp F        &kp W   &kp R    &kp Y    &kp P    &kp END
-&kp LEFT_SHIFT  &kp E   &kp I   &mt LEFT_ALT A    &kp O               &kp MINUS    &kp INT_MUHENKAN  &kp INT_HENKAN   &kp K        &kp T   &kp N    &kp S    &kp H    &kp P
-&kp LCTRL       &kp Z   &kp X   &kp C             &kp V               &kp TAB      &kp LEFT_WIN      &kp DELETE       &kp G        &kp D   &kp M    &kp J    &kp B    &kp QUESTION
-                                &lt 3 INT_HENKAN  &lt 1 INT_MUHENKAN  &lt 4 SPACE  &kp DELETE        &lt 4 BACKSPACE  &lt 2 ENTER
+&kp ESC               &kp F1  &kp F2  &kp F3            &kp F4              &kp F5       &kp F6            &kp F7           &kp F8       &kp F9  &kp F10  &kp F11  &kp F12  &kp HOME
+&kp TAB               &kp Q   &kp L   &kp U             &kp COMMA           &kp PERIOD   &kp LALT          &tog 4           &kp F        &kp W   &kp R    &kp Y    &kp P    &kp END
+&mt LEFT_SHIFT ENTER  &kp E   &kp I   &mt LEFT_ALT A    &kp O               &kp MINUS    &kp INT_MUHENKAN  &kp INT_HENKAN   &kp K        &kp T   &kp N    &kp S    &kp H    &kp P
+&kp LCTRL             &kp Z   &kp X   &kp C             &kp V               &kp TAB      &kp LEFT_WIN      &kp DELETE       &kp G        &kp D   &kp M    &kp J    &kp B    &kp QUESTION
+                                      &lt 3 INT_HENKAN  &lt 1 INT_MUHENKAN  &lt 4 SPACE  &kp DELETE        &lt 4 BACKSPACE  &lt 2 ENTER
             >;
         };
 
@@ -64,7 +64,7 @@
             bindings = <
 &kp ESC    &none        &none      &none          &none     &none  &none  &none    &none             &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none        &tog 7
 &kp TAB    &kp LA(TAB)  &none      &kp LGUI       &kp BSPC  &none  &none  &none    &none             &kp DEL          &kp UP_ARROW       &kp BSPC         &none        &none
-&kp LSHFT  &none        &kp LCTRL  &kp LSHFT      &kp BSPC  &none  &none  &none    &kp INT_HENKAN    &kp LEFT         &kp DOWN           &kp RIGHT        &none        &none
+&kp LSHFT  &none        &kp LCTRL  &kp LSHFT      &kp BSPC  &none  &none  &none    &kp INT_HENKAN    &kp LEFT         &kp DOWN           &kp RIGHT        &kp ENTER    &none
 &kp LCTRL  &kp LALT     &kp LGUI   &kp PAGE_DOWN  &none     &none  &none  &none    &kp INT_MUHENKAN  &kp LC(LS(TAB))  &kp LC(GRAVE)      &kp LC(TAB)      &kp LA(TAB)  &none
                                    &none          &none     &none  &none  &kp DEL  &kp BSPC
             >;
