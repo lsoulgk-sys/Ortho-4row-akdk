@@ -63,8 +63,8 @@
         arrow {
             bindings = <
 &kp ESC    &none        &none      &none          &none     &none  &none  &none    &none             &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none        &tog 7
-&kp TAB    &kp LA(TAB)  &none      &kp LGUI       &kp BSPC  &none  &none  &none    &none             &kp DEL          &kp UP_ARROW       &kp BSPC         &none        &none
-&kp LSHFT  &none        &kp LCTRL  &kp LSHFT      &kp BSPC  &none  &none  &none    &kp INT_HENKAN    &kp LEFT         &kp DOWN           &kp RIGHT        &kp ENTER    &none
+&kp TAB    &none        &none      &kp LGUI       &kp BSPC  &none  &none  &none    &none             &kp DEL          &kp UP_ARROW       &kp BSPC         &none        &none
+&kp LSHFT  &kp LA(TAB)  &kp LCTRL  &kp LSHFT      &kp BSPC  &none  &none  &none    &kp INT_HENKAN    &kp LEFT         &kp DOWN           &kp RIGHT        &kp ENTER    &none
 &kp LCTRL  &kp LALT     &kp LGUI   &kp PAGE_DOWN  &none     &none  &none  &none    &kp INT_MUHENKAN  &kp LC(LS(TAB))  &kp LC(GRAVE)      &kp LC(TAB)      &kp LA(TAB)  &none
                                    &none          &none     &none  &none  &kp DEL  &kp BSPC
             >;
