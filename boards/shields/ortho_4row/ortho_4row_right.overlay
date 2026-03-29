@@ -113,4 +113,3 @@
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
     };
 };
-
