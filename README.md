@@ -25,69 +25,68 @@ USB-C cable|1|
 |Diode|62|
 |Keycap|62|
 
-# XTEINK X4 用 CJK フォントコンバーター
+# CJK Font Converter for XTEINK X4
 
-これは、XTEINK X4（CrossPoint Reader）専用に開発されたフォント変換ツールです。TrueType（TTF）またはOpenType（OTF）フォントを、システムと互換性のある`.bin`ビットマップ形式に変換し、カスタム外部フォントをサポートします。
+This is a font conversion tool specifically developed for the XTEINK X4 (CrossPoint Reader). It converts TrueType (TTF) or OpenType (OTF) fonts into the `.bin` bitmap format compatible with the system to support custom external fonts.
 
-＃＃ はじめる
+## Getting Started
 
-1. **Python環境**: コンピュータにPython 3がインストールされていることを確認してください。
-2. **枕を取り付ける**:
+1. **Python Environment**: Ensure Python 3 is installed on your computer.
+2. **Install Pillow**:
    ```bash
    pip install Pillow
-   「`」
-3. **フォントの追加**: 変換したい `.ttf` または `.otf` フォントを `fonts/` ディレクトリに配置します。
+   ```
+3. **Add Fonts**: Place the `.ttf` or `.otf` fonts you wish to convert into the `fonts/` directory.
 
-## フォントの.binファイルの作成
+## Creating Font .bin Files
 
-変換を実行するには、`convert_font.py` スクリプトを使用してください。
+Use the `convert_font.py` script to perform the conversion.
 
-### 基本コマンド
+### Basic Command
 ```bash
 python convert_font.py --font fonts/your_font.ttf --size 32
-「`」
+```
 
-### 引数の説明
-- `--font`: ソースフォントファイルへのパス（必須）。
-- `--size`: フォントサイズ（pt単位）（必須）。
-- `--measure`: 実際の変換を行わずに、推奨されるセル（グリッド）サイズを測定します。
-- `--width` / `--height`: セルの幅/高さを手動で指定します（省略した場合は自動検出されます）。
-- `--threshold`: バイナリ化のしきい値 (0～255、デフォルトは128)。小さいほど太く、大きいほど細くなります。
-- `--sharpen`: 二値化の前にシャープニングフィルタを適用します。
-- `--preview`: 出力ディレクトリに視覚的な確認用の `preview.png` を生成します。
-- `--upscale`: スーパーサンプリング係数（例：4）。ダウンスケール前に高解像度でレンダリングすることで、画質を向上させます。
-- `--dither`: ハードしきい値処理の代わりにフロイド・スタインバーグディザリングを使用します（電子インクに推奨）。
-- `--gamma`: 太さ調整のためのガンマ補正（デフォルトは1.0）。太くするには`> 1.0`、細くするには`< 1.0`を使用してください。
+### Argument Descriptions
+- `--font`: Path to the source font file (Required).
+- `--size`: Font size in pt (Required).
+- `--measure`: Measure the suggested cell (grid) size without performing actual conversion.
+- `--width` / `--height`: Manually specify the cell width/height (Auto-detected if omitted).
+- `--threshold`: Binarization threshold (0-255, default 128). Lower = Bolder, Higher = Thinner.
+- `--sharpen`: Apply sharpening filter before binarization.
+- `--preview`: Generate a `preview.png` in the output directory for visual check.
+- `--upscale`: Super-sampling factor (e.g. 4). Renders at higher resolution before downscaling for better quality.
+- `--dither`: Use Floyd-Steinberg dithering instead of hard thresholding (Recommended for E-ink).
+- `--gamma`: Gamma correction for weight adjustment (default 1.0). Use `> 1.0` for bolder, `< 1.0` for thinner.
 
-### 例: 推奨セルサイズのプレビュー
+### Example: Preview Suggested Cell Size
 ```bash
 python convert_font.py --font fonts/TaipeiSansTC-Regular.ttf --size 32 --measure
-「`」
+```
 
-### 例: 基本的な変換
+### Example: Basic Conversion
 ```bash
 python convert_font.py --font fonts/TaipeiSansTC-Regular.ttf --size 32
-「`」
+```
 
-### 例：高品質電子インク最適化（推奨）
-このコマンドは、スーパーサンプリングとディザリングを使用して、プロ仕様のレイアウトエンジンと同様の滑らかさを実現します。
+### Example: High-Quality E-ink Optimized (Recommended)
+This command uses super-sampling and dithering to achieve smoothness similar to professional layout engines.
 ```bash
 python convert_font.py --font fonts/TaipeiSansTC-Regular.ttf --size 32 --upscale 4 --dither --gamma 1.5 --preview
-「`」
-変換されたファイルは、`output/` ディレクトリに `preview.png` と共に生成されます。
+```
+The converted file will be generated in the `output/` directory alongside a `preview.png`.
 
-## SDカードへのインストール
+## Installation to SD Card
 
-デバイスでカスタムフォントを有効にするには：
+To enable custom fonts on your device:
 
-1. **ファイル名の確認**: 生成されたファイルは、命名規則「フォント名_サイズ_幅x高さ.bin」（例：`TaipeiSansTC_32_32x33.bin`）に従う必要があります。
-2. **SD​​カードへの転送**: 生成された`.bin`ファイルをSDカードの**/fonts/**ディレクトリにコピーします。
-   - パス: `SD_CARD/fonts/`
-3. **使用方法**: このフォント名とサイズをLuaプラグイン内で直接参照できるようになりました。
+1. **Check Filename**: The generated file must follow the naming convention: `FontName_Size_WxH.bin` (e.g., `TaipeiSansTC_32_32x33.bin`).
+2. **Transfer to SD Card**: Copy the generated `.bin` file to the **/fonts/** directory on your SD card.
+   - Path: `SD_CARD/fonts/`
+3. **Usage**: You can now reference this font name and size directly in your Lua plugins.
 
-## 技術仕様
-- **範囲**: Unicode U+0000～U+FFFF（基本多言語面）をサポートします。
-- **フォーマット**: 1ピクセルあたり1ビット（MSB優先）、行優先順。
-- **配置**: フォントのベースラインは、ビットマップ行の下端から 4 ピクセルの位置に配置されます。
-- **ファイルサイズの計算**: `bytesPerChar = ceil(width/8) * height`; 合計ファイルサイズ = `65536 * bytesPerChar`。
- 
+## Technical Specifications
+- **Range**: Supports Unicode U+0000 to U+FFFF (Basic Multilingual Plane).
+- **Format**: 1-bit per pixel (MSB-first), row-major order.
+- **Alignment**: The font baseline is positioned 4 pixels from the bottom of the bitmap row.
+- **File Size Calculation**: `bytesPerChar = ceil(width/8) * height`; Total file size = `65536 * bytesPerChar`.
