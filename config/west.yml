@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
-      revision: fed2cf69da6de3f6a9a60bdef671da2abd648cdd
+      revision: abb64ba316c29caddc49727ca2cac2f0ed5970c7
   self:
     path: config
