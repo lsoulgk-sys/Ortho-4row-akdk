@@ -5,6 +5,7 @@
 #include <physical_layouts.dtsi>
 
 / {
+    chosen {
     ortho_4row_physical_layout: ortho_4row_physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Ortho 4row Layout";
@@ -74,9 +75,9 @@
             , <&key_physical_attrs 100 100 1100  425       0  1100   425>
             , <&key_physical_attrs 100 100 1200  425       0  1200   425>
             ;
+        };
     };
 };
-
 
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
